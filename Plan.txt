@@ -1,0 +1,35 @@
+Things to put on website:
+1. About club
+2. Photo gallery
+3. About members
+4. Blogs
+
+Things needed:
+1. About info
+2. Photos
+3. Blogs
+4. collage n all
+
+Web pages:
+1. Landing page
+2. About club
+3. Team
+4. Blogs
+
+Remember:
+1. 404, 500 error pages
+2. Loader
+
+Seems like:
+1. Backend- django
+2. Frontend- Bootstrap
+3. Database- Firebase
+4. Domain- GoDaddy
+5. Hosting- Vercel
+
+Working of members info:
+1. There will be a private url for registering members. Members can fill their details along with links for their web presence over there.
+2. This data will be stored as a object of member class.
+3. The class contains a boolean field that will be false by default. The admin will validate the each object data and make the field True.
+4. All the objects with validation field as True will be rendered on the Team web page.
+5. On the Team page, dictionary of valid member objects will be in a For loop, in which profile card will be made.
