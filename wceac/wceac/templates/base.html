@@ -4,14 +4,47 @@
 <head>
     <meta charset="utf-8" content="width=device-width, initial-scale=1.0" name="viewport">
     <title>{% block title %}{% endblock %}</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
-    <link ref="" href="{% static '' %}">
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="{% static 'style/nav.css' %}">
+    
 </head>
 
 <body>
 <!--navbar-->
 
+<header id="header">
+		<div id="hamburger-nav-bar-line"></div>
+			<div id="navigation">
+				<div class="logo">
+					<a href="#"><img id="header-img" src="{% static 'images/aclogo_black.png' %}" alt="club logo"/></a>
+					<p style="font-size: 1.1rem;
+	font-weight: 400;
+	line-height: 1.6;
+	color: var(--color-grey-text);margin-top:1rem;margin-bottom:1rem" id="logo-name">WCE Art Circle</p>
+				</div>
+
+				<nav id="nav-bar">
+					<label for="hamburger-checkbox" id="ham-nav-icon" aria-hidden="true">&#9776;</label>
+					<input type="checkbox" id="hamburger-checkbox" aria-hidden="true"/>
+					<ul id="nav-bar-list" class="nobullets">
+						<li>
+                        <a class="link nav-link" href="#home"> Home </a></li>
+                        <li>
+                        <a class="link nav-link" href="#"> About us </a></li>
+                        <li>
+                        <a class="link nav-link" href="#"> Team </a></li>
+                        <li>
+                        <a class="link nav-link" href="#"> Events </a></li>
+						<li>
+						<a class="link nav-link" href="#"> Blogs </a></li>
+						<li>
+                        <a class="link nav-link" href="#"> Gallery </a></li>
+					</ul>
+				</nav>
+			</div>
+        </div>
+</header>
 <!--footer-->
 
 {% block content%}
