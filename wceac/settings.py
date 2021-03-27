@@ -25,7 +25,7 @@ b='p$7i4@ylvbx-auq)l8d_=+b'
 SECRET_KEY = a+b
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['wceac.herokuapp.com','127.0.0.1']
 
