@@ -1,179 +1,25 @@
-/**, html
-{
-    width: 100%;
-}*/
-
-
-/*YUVARANG TEXT AND REGISTER BUTTON*/
-
-
-/*btn1 class is created for convenience while styling other buttons*/
-/*.btn1
-{
-    outline:none;
-    padding:10px 20px;
-    border-radius:20px;
-    color:#fff;
-    transition:0.5s;
-    width:150px;
-    background:transparent;
-    border:1px solid #fff;
-    box-shadow:0px 1px 1px 0px #000;
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
 }
-    
-.btn1:hover
-{
-    color: #000;
-    background:#fff;
-    border:1px solid #fff;
-    box-shadow:0px 0px 0px 0px #fff;
-}*/
-
-/*#myCarousel h1
-{
-    position:absolute;
-    z-index:1;
-    display:flex;
-    align-items:center;
-    justify-content: center;
-    top:30%;
-    font-family: 'Pirata One', cursive;
-
-    color:#fff;
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
 }
 
-#myCarousel .btn1
-{
-    color:#fff;
-    position:absolute;
-    z-index:1;
-    display:flex;
-    align-items:center;
-    justify-content: center;
-
-    top:50%;
-    left:45%;
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+  background-color: black;
 }
-
-#myCarousel .btn1:hover
-{
-    color: #000;
-}*/
-
-
-
-/*Slideshow*/
-
-/*.carousel-inner
-{
-    max-height:100vh;
-    width:100%;
+.carousel-item > img {
+  position: absolute;
+  background-color: black;
+  object-fit: cover;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
 }
-
-
-#myCarousel img
-{
-    height:100%;
-    width:100%;
-}
-
-
-@media (max-width:600px){
-    #myCarousel .btn1{
-    position:absolute;
-    left:30%;
-    top:55%;
-    }
-    .carousel-inner{
-    max-height:70vh;
-    width:100%;
-    }
-    #myCarousel img{
-    height:70vh;
-    width:100%;
-    }
-    #myCarousel h1{
-      top: 35%;
-      font-size: 25px;
-    }
-    }*/
-    
-@-webkit-keyframes zoom {
-  from {
-    -webkit-transform: scale(1, 1);
-  }
-  to {
-    -webkit-transform: scale(1.2, 1.2);
-  }
-}
-
-
-
-@keyframes zoom 
-{
-  from {
-    transform: scale(1, 1);
-  }
-  to {
-    transform: scale(1.2, 1.2);
-  }
-}
-
-
-.carousel-inner .item > img {
-  -webkit-animation: zoom 10s;
-  animation: zoom 10s;
-}
-
-
-
-/*
-/*SECTION1
-.container{
-    width:95%;
-    display:flex;
-    align-items:center;
-    justify-content: center;
-    padding: 15px auto 15px auto;
-    }
-    .section1{
-    width:100%;
-    display:flex;
-    align-items:center;
-    justify-content: center;
-    position:relative;
-    top:-50px;
-    height:35vh;
-    overflow-x:auto;
-    scrollbar-width:none;
-    scroll-behavior: smooth;
-    }
-    .section1 .card{
-    width:200px;
-    height:150px;
-    padding:30px;
-    border-radius:5px;
-    box-shadow:0px 6px 16px -6px rgba(1,1,1,0.4);
-    display:inline-block;
-    margin:0px 10px;
-    font-family: 'Yeon Sung', cursive;
-    text-align:center;
-    background:#fff;
-    }
-    .section1 .card img{
-    width:100%;
-    height:100%;
-    padding:15px;
-    pointer-events:none;
-    }
-    
-    @media (max-width:600px){
-    .section1{
-    height:40svh;
-    position:relative;
-    top:0px;
-    }
-    .section1 .card{
-    min-width:300px;
-    }
-}*/

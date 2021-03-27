@@ -16,13 +16,14 @@ class MemberRegistration(View):
             board = request.POST.get('board')
             position = request.POST.get('position')
             team = request.POST.get('team')
-            photo = request.POST.get('photo')
+            photo = request.FILES.get('photo')
             description = request.POST.get('description')
             insta = request.POST.get('insta')
             artwork = request.POST.get('artwork')
             artworklink = request.POST.get('artworklink')
             Member = member(first_name=first_name,last_name=last_name,board=board,position=position,team=team,photo=photo,description=description,insta=insta,artwork=artwork,artworklink=artworklink)
             Member.save()
+            print('DONE')
         except:
             message['error']='Something went wrong, try again.'
         message['error']='Registered Successfully.'

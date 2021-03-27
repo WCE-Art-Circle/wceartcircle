@@ -7,9 +7,11 @@
 <link rel="stylesheet" type="text/css" href="{% static 'style/form.css' %}">
 	<div class="container-contact100">
 		<div class="wrap-contact100">
-			<form class="contact100-form validate-form">
+			<form method="post" enctype="multipart/form-data" class="contact100-form validate-form">
+			{% csrf_token %}
 				<span class="contact100-form-title">
-					Art Circle Member<p>This information will be displayed on Art Circle Website.</p>
+					Art Circle Member<p>This information will be displayed on Art Circle Website.<br><b><i>
+					{{error}}</b></i></p>
 				</span>
 
 				<div class="wrap-input100 validate-input" data-validate="Required">
@@ -27,7 +29,7 @@
 				<div class="wrap-input100 input100-select">
 					<span class="label-input100">Board *</span>
 					<div>
-						<select class="selection-2" name="service">
+						<select class="selection-2" name="board">
 							<option>Main Board</option>
 							<option>Assistant Board</option>
 							<option>Member</option>
