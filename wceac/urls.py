@@ -15,15 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import handler400, handler403, handler404, handler500
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
+handler404 = 'wceac.views.error_404'
+handler500 = 'wceac.views.error_500'
+handler403 = 'wceac.views.error_403'
+handler400 = 'wceac.views.error_400'
 urlpatterns = [
     path('aapconvincehogayeyameinaurbolu/', admin.site.urls),
     #path('admin/', admin.site.urls),
     path('', views.landing.as_view(),name='landing'),
     path('team/', include('team.urls')),
 ]
+
 
 if settings.DEBUG:
         urlpatterns += static(settings.MEDIA_URL,
