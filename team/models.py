@@ -7,7 +7,7 @@ class member(models.Model):
     board=models.CharField(max_length=50)       #main, asst, member
     position=models.CharField(max_length=50)    #event dir, treasure, etc
     team=models.CharField(max_length=50)        #dance, band, etc
-    photo=models.ImageField(upload_to='members_photo')                   
+    photo=models.URLField(max_length=100)                   
     description=models.CharField(max_length=200,blank=True)#hobbies, beliefs
     insta=models.URLField(blank=True)           #link to insta account
     artwork=models.CharField(max_length=100,blank=True)#blogs, art channel, etc

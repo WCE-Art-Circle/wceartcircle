@@ -4,7 +4,7 @@ from django.db import models
 class blog(models.Model):
     author_name=models.CharField(max_length=50)
     author_artC=models.CharField(max_length=50)
-    published_date=models.DateTimeField()
+    published_date=models.DateField()
     title=models.CharField(max_length=100)
     content=models.TextField()
 
