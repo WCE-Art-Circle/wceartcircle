@@ -29,6 +29,7 @@ urlpatterns = [
     path('', views.landing.as_view(),name='landing'),
     path('team/', include('team.urls')),
     path('blogs/', include('blogs.urls')),
+    path('', include('gsheets.urls')),
 ]
 
 

@@ -1,7 +1,15 @@
 from django.db import models
-
+from django.db import models
+from gsheets import mixins
+from uuid import uuid4
 # Create your models here.
-class member(models.Model):
+class member(mixins.SheetSyncableMixin,models.Model):
+    spreadsheet_id = '18llMpeGiuDJHYMg1qSCQB3tPElB96pGePqaF255yAFU'
+    sheet_id='0'
+    model_id_field = 'guid'
+
+    guid = models.CharField(primary_key=True, max_length=255, default=uuid4)
+
     first_name=models.CharField(max_length=50)
     last_name=models.CharField(max_length=50)
     board=models.CharField(max_length=50)       #main, asst, member
@@ -18,7 +26,7 @@ class member(models.Model):
     def __str__(self):
         return self.first_name+" "+self.last_name
 
-class alumni(models.Model):
+class alumni(mixins.SheetSyncableMixin,models.Model):
     name=models.CharField(max_length=100)
     remark=models.CharField(max_length=100)#batch & position, like 2020-21 President
     experience=models.TextField()

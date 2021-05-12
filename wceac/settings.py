@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'gsheets',
 ]
 
 MIDDLEWARE = [
@@ -104,6 +105,10 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+GSHEETS = {
+    'CLIENT_SECRETS': BASE_DIR/'7vi4rlup6uo4juqaqfgkmh05mhvtforo.apps.googleusercontent.com'
+}
 
 
 # Internationalization
