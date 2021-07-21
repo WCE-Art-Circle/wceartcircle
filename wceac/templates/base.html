@@ -18,24 +18,24 @@
 
 
 </head>
-<body>
+<body onload="myfunction()" >
 
-
+<div id="loader" ></div>
 <!--navbar-->
 <header id="header">
-		<div id="hamburger-nav-bar-line"></div>
+		<div id="-nav-bar-line"></div>
 			<div id="navigation">
 				<div class="logo">
 					<a href="#"><img id="header-img" src="{% static 'images/aclogo_black.png' %}" alt="club logo"/></a>
 					<p style="font-size: 1.1rem;
 	font-weight: 400;
 	line-height: 1.6;
-	color: var(--color-grey-text);margin-top:1rem;margin-bottom:1rem" id="logo-name">WCE Art Circle</p>
+	color: var(--color-grey-text);margin-top:1rem;margin-bottom:1rem" id="logo-name">WCE  Circle</p>
 				</div>
 
 				<nav id="nav-bar">
-					<label for="hamburger-checkbox" id="ham-nav-icon" aria-hidden="true">&#9776;</label>
-					<input type="checkbox" id="hamburger-checkbox" aria-hidden="true"/>
+					<label for="-checkbox" id="ham-nav-icon" aria-hidden="true">&#9776;</label>
+					<input type="checkbox" id="-checkbox" aria-hidden="true"/>
 					<ul id="nav-bar-list" class="nobullets">
 						<li>
                         <a class="link nav-link" href="#home"> Home </a></li>
@@ -73,5 +73,11 @@
 <script src="https://getbootstrap.com/docs/4.1/dist/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+<script>
+	var preloader = document.getElementById("loader");
+	function myfunction(){
+		preloader.style.display = "none";	
+	}
+</script>
 </body>
 </html>
